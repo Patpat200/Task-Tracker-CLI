@@ -1,6 +1,6 @@
 
 
-# Task Tracker CLI
+# Task Tracker CLI https://roadmap.sh/projects/task-tracker
 
 Task Tracker CLI is a simple command-line application designed to help you track, manage, and organize your tasks. It stores tasks in a JSON file and allows you to interact with them using various commands. This project will help you practice programming, including working with files, handling user inputs, and building a CLI application.
 
@@ -162,7 +162,7 @@ The application gracefully handles the following errors:
 
 Feel free to contribute! You can open an issue if you encounter any bugs or want to suggest new features. Pull requests are also welcome.
 
-## License https://roadmap.sh/projects/task-tracker
+## License 
 
 This project is free to use and modify. You can use it for personal or educational purposes.
 
