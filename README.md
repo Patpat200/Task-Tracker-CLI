@@ -162,7 +162,7 @@ The application gracefully handles the following errors:
 
 Feel free to contribute! You can open an issue if you encounter any bugs or want to suggest new features. Pull requests are also welcome.
 
-## License
+## License https://roadmap.sh/projects/task-tracker
 
 This project is free to use and modify. You can use it for personal or educational purposes.
 
