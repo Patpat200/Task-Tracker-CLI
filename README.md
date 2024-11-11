@@ -1,74 +1,74 @@
-Voici un fichier README pour la première version de votre projet Task Tracker CLI :
+Here's the README in English:
 
 ---
 
 # Task Tracker CLI
 
-Task Tracker CLI est une application de suivi de tâches en ligne de commande, permettant de gérer vos tâches facilement. L'application stocke les tâches dans un fichier JSON et vous permet d'ajouter, de mettre à jour, de supprimer, et de changer l'état des tâches.
+Task Tracker CLI is a command-line application for managing tasks easily. The application stores tasks in a JSON file and allows you to add, update, delete, and change the status of tasks.
 
-## Fonctionnalités
+## Features
 
-L'application offre les fonctionnalités suivantes :
+The application provides the following features:
 
-1. **Ajouter une tâche** : Ajoutez une nouvelle tâche avec une description.
-2. **Mettre à jour une tâche** : Modifiez la description d'une tâche existante.
-3. **Supprimer une tâche** : Supprimez une tâche en fonction de son identifiant.
-4. **Marquer une tâche comme en cours ou terminée** : Changez le statut d'une tâche.
-5. **Lister les tâches** : Affichez toutes les tâches, ou uniquement les tâches terminées, non terminées, ou en cours.
+1. **Add a Task**: Add a new task with a description.
+2. **Update a Task**: Update the description of an existing task.
+3. **Delete a Task**: Delete a task based on its ID.
+4. **Mark a Task as In Progress or Done**: Change the status of a task.
+5. **List Tasks**: Display all tasks, or filter tasks that are completed, pending, or in progress.
 
 ## Installation
 
-1. Clonez le dépôt ou téléchargez les fichiers.
-2. Assurez-vous que Python est installé sur votre système (Python 3.6 ou supérieur).
-3. Naviguez vers le dossier du projet :
+1. Clone the repository or download the files.
+2. Ensure Python is installed on your system (Python 3.6 or higher).
+3. Navigate to the project directory:
 
    ```bash
    cd task-tracker-cli
    ```
 
-## Utilisation
+## Usage
 
-Les commandes s'exécutent via la ligne de commande. Voici comment utiliser chaque fonctionnalité :
+Commands are executed from the command line. Here’s how to use each feature:
 
-### 1. Ajouter une tâche
-
-```bash
-python task_tracker.py add "Acheter des courses"
-```
-
-### 2. Mettre à jour une tâche
+### 1. Add a Task
 
 ```bash
-python task_tracker.py update <id_de_la_tâche> "Acheter des courses et cuisiner"
+python task_tracker.py add "Buy groceries"
 ```
 
-### 3. Supprimer une tâche
+### 2. Update a Task
 
 ```bash
-python task_tracker.py delete <id_de_la_tâche>
+python task_tracker.py update <task_id> "Buy groceries and cook dinner"
 ```
 
-### 4. Marquer une tâche comme en cours
+### 3. Delete a Task
 
 ```bash
-python task_tracker.py mark-in-progress <id_de_la_tâche>
+python task_tracker.py delete <task_id>
 ```
 
-### 5. Marquer une tâche comme terminée
+### 4. Mark a Task as In Progress
 
 ```bash
-python task_tracker.py mark-done <id_de_la_tâche>
+python task_tracker.py mark-in-progress <task_id>
 ```
 
-### 6. Lister les tâches
+### 5. Mark a Task as Done
 
-Pour afficher toutes les tâches :
+```bash
+python task_tracker.py mark-done <task_id>
+```
+
+### 6. List Tasks
+
+To list all tasks:
 
 ```bash
 python task_tracker.py list
 ```
 
-Pour afficher uniquement les tâches terminées, non terminées ou en cours :
+To list only completed, pending, or in-progress tasks:
 
 ```bash
 python task_tracker.py list done
@@ -76,55 +76,52 @@ python task_tracker.py list todo
 python task_tracker.py list in-progress
 ```
 
-## Format des Tâches
+## Task Structure
 
-Chaque tâche est stockée dans le fichier `tasks.json` avec les propriétés suivantes :
+Each task is stored in the `tasks.json` file with the following properties:
 
-- **id** : Identifiant unique de la tâche.
-- **description** : Description de la tâche.
-- **status** : Statut de la tâche (`todo`, `in-progress`, `done`).
-- **createdAt** : Date et heure de création.
-- **updatedAt** : Date et heure de la dernière mise à jour.
+- **id**: Unique identifier for the task.
+- **description**: Description of the task.
+- **status**: Status of the task (`todo`, `in-progress`, `done`).
+- **createdAt**: Date and time when the task was created.
+- **updatedAt**: Date and time when the task was last updated.
 
-## Exemple d'utilisation
+## Example Usage
 
 ```bash
-# Ajouter une tâche
-python task_tracker.py add "Préparer la réunion de lundi"
-# Mettre à jour la tâche
-python task_tracker.py update 1 "Préparer la réunion de lundi avec le rapport trimestriel"
-# Marquer la tâche comme en cours
+# Add a task
+python task_tracker.py add "Prepare for Monday's meeting"
+# Update the task
+python task_tracker.py update 1 "Prepare for Monday's meeting with the quarterly report"
+# Mark the task as in progress
 python task_tracker.py mark-in-progress 1
-# Marquer la tâche comme terminée
+# Mark the task as done
 python task_tracker.py mark-done 1
-# Lister toutes les tâches terminées
+# List all completed tasks
 python task_tracker.py list done
 ```
 
-## Structure du Projet
+## Project Structure
 
 ```
 task-tracker-cli/
 │
-├── task_tracker.py         # Fichier principal de l'application
-└── tasks.json              # Fichier JSON pour stocker les tâches (créé automatiquement)
+├── task_tracker.py         # Main application file
+└── tasks.json              # JSON file to store tasks (automatically created)
 ```
 
-## Gestion des Erreurs
+## Error Handling
 
-Le programme gère les erreurs suivantes :
-- **Fichier JSON vide ou inexistant** : Crée un fichier vide s'il n'existe pas.
-- **ID de tâche non trouvé** : Affiche un message d'erreur si l'ID n'est pas valide.
-- **Commandes incorrectes** : Vérifie et affiche un message d'erreur pour les commandes ou les arguments incorrects.
+The program handles the following errors:
+- **Empty or Missing JSON File**: Creates an empty file if it doesn’t exist.
+- **Task ID Not Found**: Displays an error message if the ID is invalid.
+- **Incorrect Commands**: Checks for incorrect commands or arguments and displays an error message.
 
-## Contributions
+## Contributing
 
-Les contributions sont les bienvenues ! N'hésitez pas à proposer des améliorations ou à ouvrir des issues pour discuter des problèmes ou des fonctionnalités potentielles.
+Contributions are welcome! Feel free to open issues to discuss bugs or potential features, or to submit a pull request.
 
-## Licence
+## License
 
-Ce projet est libre d'utilisation et modifiable selon vos besoins.
+This project is free to use and modify as needed.
 
----
-
-Cela devrait vous fournir un README clair et complet pour votre dépôt GitHub.
